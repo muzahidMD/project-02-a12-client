@@ -1,8 +1,14 @@
 import React from 'react';
-import PrimaryButton from '../Shared/PrimaryButton';
+import { useNavigate } from 'react-router-dom';
 
 const Product = ({ product }) => {
     const { _id, name, price, description, img, quantity } = product;
+
+    const navigate = useNavigate();
+
+    const navigateToProductDetail = (id) => {
+        navigate(`/product/${id}`)
+    }
 
     return (
         <div className=''>
@@ -20,7 +26,7 @@ const Product = ({ product }) => {
                         <p><small><strong> Minimum Order: </strong> {quantity} </small></p>
                     </div>
                     <div className="card-actions justify-center mt-3">
-                        <button className="btn bg-white text-black hover:bg-red-600 hover:text-white rounded-full">Buy Now</button>
+                        <button onClick={() => navigateToProductDetail(_id)} className="btn bg-white text-black hover:bg-red-600 hover:text-white rounded-full">Buy Now</button>
                     </div>
                 </div>
             </div>
