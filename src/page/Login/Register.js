@@ -30,12 +30,13 @@ const SignUp = () => {
 
     if (gUser || user) {
         console.log(gUser || user);
+        navigate('/')
     }
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         toast("Updated done");
-        navigate('/appointment')
+
     };
     return (
         <div className='flex h-screen justify-center items-center'>
