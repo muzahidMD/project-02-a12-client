@@ -10,7 +10,7 @@ const Products = () => {
             <h2 className='text-4xl text-secondary text-center uppercase font-bold'>Products</h2>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
                 {
-                    products.slice(0, 6).map(product => <Product
+                    products.slice(0, 6).reverse().map(product => <Product
                         key={product._id}
                         product={product}
                     ></Product>)
