@@ -50,7 +50,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input
+                            <button
                                 type="text"
                                 placeholder="Your Name"
                                 className="input input-bordered w-full max-w-xs"
@@ -71,7 +71,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input
+                            <button
                                 type="email"
                                 placeholder="Your Email"
                                 className="input input-bordered w-full max-w-xs"
@@ -97,7 +97,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input
+                            <button
                                 type="password"
                                 placeholder="Password"
                                 className="input input-bordered w-full max-w-xs"
@@ -121,7 +121,7 @@ const SignUp = () => {
 
                         {signInError}
 
-                        <input className='btn w-full max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Sign Up' />
+                        <button className='btn w-full max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Sign Up' />
                     </form>
                     <p className='text-center'><small>Already have an account ? <Link className='text-secondary' to={'/login'}> Please Login</Link></small></p>
                     <div className="divider">OR</div>

@@ -4,76 +4,98 @@
         "name": "Back Mirror",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/RNdSCHp/Back-mirror.png"
+        "img": "https://i.ibb.co/RNdSCHp/Back-mirror.png",
+        "available": "1000",
+        "minimumOrder": "100"
     },
     {
         "_id": 2,
         "name": "Engine",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/StvgKc8/Engine.png"
+        "img": "https://i.ibb.co/StvgKc8/Engine.png",
+        "available": "1700",
+        "minimumOrder": "100"
     },
     {
         "_id": 3,
         "name": "Air Filter",
         "price": "150",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/BrZT71s/Air-filter.png"
+        "img": "https://i.ibb.co/BrZT71s/Air-filter.png",
+        "available": "1500",
+        "minimumOrder": "150"
     },
     {
         "_id": 4,
         "name": "Alternator",
         "price": "180",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tBwM8f6/Alternator.jpg"
+        "img": "https://i.ibb.co/tBwM8f6/Alternator.jpg",
+        "available": "1000",
+        "minimumOrder": "100"
     },
     {
         "_id": 5,
         "name": "Steering Wheel",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tDpm8qz/Steering-Wheel.jpg"
+        "img": "https://i.ibb.co/tDpm8qz/Steering-Wheel.jpg",
+        "available": "1400",
+        "minimumOrder": "100"
     },
     {
         "_id": 6,
         "name": "Turbocharger",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/7pSGmxn/Turbocharger.jpg"
+        "img": "https://i.ibb.co/7pSGmxn/Turbocharger.jpg",
+        "available": "5000",
+        "minimumOrder": "500"
     },
     {
         "_id": 7,
         "name": "Hubcap",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/471WJ2w/Hubcap.png"
+        "img": "https://i.ibb.co/471WJ2w/Hubcap.png",
+        "available": "3500",
+        "minimumOrder": "300"
     },
     {
         "_id": 8,
         "name": "Shock Absorber",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/PrLzKcP/Shock-Absorber.png"
+        "img": "https://i.ibb.co/PrLzKcP/Shock-Absorber.png",
+        "available": "4000",
+        "minimumOrder": "400"
     },
     {
         "_id": 9,
         "name": "Spark Plug",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/zS6QVGs/Spark-plug.png"
+        "img": "https://i.ibb.co/zS6QVGs/Spark-plug.png",
+        "available": "10000",
+        "minimumOrder": "1000"
     },
     {
         "_id": 10,
         "name": "Tire",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/gD34tWm/Tire.jpg"
+        "img": "https://i.ibb.co/gD34tWm/Tire.jpg",
+        "available": "7500",
+        "minimumOrder": "700"
     },
     {
         "_id": 11,
         "name": "Window",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/hC7H4k8/Window.png"
+        "img": "https://i.ibb.co/hC7H4k8/Window.png",
+        "available": "8500",
+        "minimumOrder": "800"
     }
 ]

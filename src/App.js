@@ -5,8 +5,10 @@ import Login from './page/Login/Login';
 import Navbar from './page/Shared/Navbar';
 import Register from './page/Login/Register';
 import Blog from './page/Blog/Blog';
-import ProductDetail from './page/Home/ProductDetail';
+import Purchase from './page/Home/Purchase';
 import NotFound from './page/NotFound/NotFound';
+import RequireAuth from './page/Login/RequireAuth';
+import Portfolio from './page/Portfolio/Portfolio';
 
 
 function App() {
@@ -18,7 +20,12 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/blog' element={<Blog />}></Route>
-        <Route path='/product/:productId' element={<ProductDetail />}></Route>
+        <Route path='/portfolio' element={<Portfolio />}></Route>
+        <Route path='/purchase/:productId' element={
+          <RequireAuth>
+            <Purchase />
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </div>

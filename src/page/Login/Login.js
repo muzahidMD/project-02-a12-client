@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
-import PrimaryButton from '../Shared/PrimaryButton';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -51,7 +50,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input
+                            <button
                                 type="email"
                                 placeholder="Your Email"
                                 className="input input-bordered w-full max-w-xs"
@@ -76,7 +75,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input
+                            <button
                                 type="password"
                                 placeholder="Password"
                                 className="input input-bordered w-full max-w-xs"
@@ -98,7 +97,7 @@ const Login = () => {
                             </label>
                         </div>
                         {signInError}
-                        <input className='btn w-full  max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Login' />
+                        <button className='btn w-full  max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Login' />
                     </form>
                     <p className='text-center'><small>New to  ? <Link className='text-secondary' to={'/register'}>Create new account</Link></small></p>
                     <div className="divider">OR</div>
