@@ -99,7 +99,7 @@ const Purchase = () => {
                                 </label>
                             </div>
 
-                            <input type="submit" className='btn w-full max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full mb-3 px-' value={"Order Now"} />
+                            <input type="submit" className='btn w-full max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full my-4' value={"Order Now"} />
                         </form>
                     </div>
                 </div>
