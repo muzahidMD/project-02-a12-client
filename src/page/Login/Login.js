@@ -50,7 +50,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <button
+                            <input
                                 type="email"
                                 placeholder="Your Email"
                                 className="input input-bordered w-full max-w-xs"
@@ -75,7 +75,7 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <button
+                            <input
                                 type="password"
                                 placeholder="Password"
                                 className="input input-bordered w-full max-w-xs"
@@ -97,7 +97,7 @@ const Login = () => {
                             </label>
                         </div>
                         {signInError}
-                        <button className='btn w-full  max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Login' />
+                        <input className='btn w-full  max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Login' />
                     </form>
                     <p className='text-center'><small>New to  ? <Link className='text-secondary' to={'/register'}>Create new account</Link></small></p>
                     <div className="divider">OR</div>
