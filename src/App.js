@@ -6,6 +6,7 @@ import Navbar from './page/Shared/Navbar';
 import Register from './page/Login/Register';
 import Blog from './page/Blog/Blog';
 import ProductDetail from './page/Home/ProductDetail';
+import NotFound from './page/NotFound/NotFound';
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/blog' element={<Blog />}></Route>
-        <Route path='/product/productId' element={<ProductDetail />}></Route>
+        <Route path='/product/:productId' element={<ProductDetail />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </div>
   );

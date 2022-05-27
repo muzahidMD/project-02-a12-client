@@ -1,12 +1,11 @@
 import React from 'react';
-import footerBg from '../../images/bg-footer.jpg'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 'text-base-content' rounded bg-opacity-75 text-slate-300" style={{ backgroundImage: `url(${footerBg})` }}>
+        <footer className="footer footer-center p-10 'text-base-content' rounded bg-opacity-75 text-slate-300" style={{ backgroundImage: `url(${'https://i.ibb.co/9rt6z4J/bg-footer.jpg'})` }}>
             <div className='footer'>
                 <div>
                     <h3 className='text-xl text-red-500 uppercase'>Contact Us</h3>

@@ -1,5 +1,4 @@
 import React from 'react';
-import slider from '../../images/slider.jpg'
 import PrimaryButton from '../Shared/PrimaryButton';
 import './css/Banner.css'
 
@@ -7,7 +6,7 @@ import './css/Banner.css'
 const Banner = () => {
 
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url(${slider})` }}>
+        <div className="hero min-h-screen" style={{ backgroundImage: `url(${'https://i.ibb.co/8BQ7gQr/slider.jpg'})` }}>
             <div style={{}} className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center 'text-neutral-content' text-white">
                 <div className="">
