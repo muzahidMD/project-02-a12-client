@@ -33,14 +33,27 @@ const Purchase = () => {
             toast.error(`Minimum order ${minimumOrder} pieces`)
             return;
         }
-        const orderForm = {
+        const order = {
             name: e.target.name.value,
             email: e.target.email.value,
             address: e.target.address.value,
             phone: e.target.phone.value,
+            productName: name,
             quantity: newQuantity
         }
-        console.log(orderForm);
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.success('Order Placed')
+                e.target.reset();
+            })
 
     }
     useEffect(() => {
