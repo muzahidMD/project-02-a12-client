@@ -15,6 +15,9 @@ const Navbar = () => {
         <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/'}>Home</Link></li>
         <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/blog'}>Blog</Link></li>
         <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/portfolio'}>Portfolio</Link></li>
+        {
+            user && <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/dashboard'}>Dashboard</Link></li>
+        }
 
         <li>{user ? <button onClick={logout} className="btn bg-white text-black hover:bg-red-600 hover:text-white rounded-full">Sign out</button> : <Link to={'/login'} className="btn bg-white text-black hover:bg-red-600 hover:text-white rounded-full" >Login</Link>}</li>
     </>
@@ -36,6 +39,11 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
+            </div>
+            <div className='navbar-end'>
+                <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
             </div>
         </div>
     );
