@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (user) {
@@ -14,8 +17,19 @@ const MyOrders = () => {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
             })
-                .then(res => res.json())
-                .then(data => setOrders(data))
+                .then(res => {
+                    console.log(res);
+                    if (res.status === 401 || res.status === 403) {
+                        signOut(auth);
+                        localStorage.removeItem('accessToken');
+                        navigate('/');
+                    }
+                    return res.json();
+                })
+                .then(data => {
+
+                    setOrders(data)
+                })
         }
     }, [user]);
 
@@ -39,7 +53,7 @@ const MyOrders = () => {
                                     <th>{index + 1}</th>
                                     <td>{order.productName}</td>
                                     <td>{order.quantity}</td>
-                                    <td><button className="btn btn-sm">Small</button></td>
+                                    <td><button className="btn btn-sm">DElete</button></td>
                                 </tr>)
                         }
                     </tbody>
