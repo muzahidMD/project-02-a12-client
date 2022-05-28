@@ -8,7 +8,12 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/orders?email=${user?.email}`)
+            fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }
@@ -34,7 +39,7 @@ const MyOrders = () => {
                                     <th>{index + 1}</th>
                                     <td>{order.productName}</td>
                                     <td>{order.quantity}</td>
-                                    <td><button class="btn btn-sm">Small</button></td>
+                                    <td><button className="btn btn-sm">Small</button></td>
                                 </tr>)
                         }
                     </tbody>

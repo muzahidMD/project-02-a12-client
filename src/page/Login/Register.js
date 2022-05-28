@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
@@ -21,6 +21,12 @@ const SignUp = () => {
 
     const [token] = useToken(gUser || user);
 
+    useEffect(() => {
+        if (token) {
+            navigate('/');
+        }
+    }, [navigate, token])
+
     let signInError;
 
     if (gLoading || loading || updating) {
@@ -31,13 +37,10 @@ const SignUp = () => {
         signInError = <p className='text-center text-red-600 pb-3'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (token) {
-        navigate('/');
-    }
+
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-        toast("Updated done");
 
     };
     return (
