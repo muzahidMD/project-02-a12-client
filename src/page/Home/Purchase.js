@@ -41,7 +41,7 @@ const Purchase = () => {
             productName: name,
             quantity: newQuantity
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://baker-manufacturer.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
