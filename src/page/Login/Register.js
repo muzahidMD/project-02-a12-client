@@ -1,9 +1,10 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading';
 
 const SignUp = () => {
@@ -18,6 +19,8 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    const [token] = useToken(gUser || user);
+
     let signInError;
 
     if (gLoading || loading || updating) {
@@ -28,9 +31,8 @@ const SignUp = () => {
         signInError = <p className='text-center text-red-600 pb-3'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (gUser || user) {
-        console.log(gUser || user);
-        navigate('/')
+    if (token) {
+        navigate('/');
     }
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
@@ -50,7 +52,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <button
+                            <input
                                 type="text"
                                 placeholder="Your Name"
                                 className="input input-bordered w-full max-w-xs"
@@ -71,7 +73,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <button
+                            <input
                                 type="email"
                                 placeholder="Your Email"
                                 className="input input-bordered w-full max-w-xs"
@@ -97,7 +99,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <button
+                            <input
                                 type="password"
                                 placeholder="Password"
                                 className="input input-bordered w-full max-w-xs"
@@ -121,7 +123,7 @@ const SignUp = () => {
 
                         {signInError}
 
-                        <button className='btn w-full max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Sign Up' />
+                        <input className='btn w-full max-w-xs hover:bg-white hover:text-black bg-secondary text-white rounded-full' type="submit" value='Sign Up' />
                     </form>
                     <p className='text-center'><small>Already have an account ? <Link className='text-secondary' to={'/login'}> Please Login</Link></small></p>
                     <div className="divider">OR</div>
