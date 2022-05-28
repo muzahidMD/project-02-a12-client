@@ -18,7 +18,6 @@ const MyOrders = () => {
                 }
             })
                 .then(res => {
-                    console.log(res);
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
                         localStorage.removeItem('accessToken');
@@ -27,11 +26,10 @@ const MyOrders = () => {
                     return res.json();
                 })
                 .then(data => {
-
                     setOrders(data)
                 })
         }
-    }, [user]);
+    }, [user, navigate]);
 
     return (
         <div>
