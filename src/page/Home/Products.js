@@ -3,10 +3,10 @@ import useProducts from '../../hooks/useProducts';
 import Product from './Product';
 
 const Products = () => {
-    const [products, setProducts] = useProducts();
+    const [products,] = useProducts();
 
     return (
-        <div className='my-8 px-12'>
+        <div className='my-8 mx-auto w-[90%] lg:w-[75%]'>
             <h2 className='text-4xl text-secondary text-center uppercase font-bold'>Products</h2>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
                 {

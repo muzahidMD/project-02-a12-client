@@ -32,6 +32,18 @@ const Summary = () => {
                     <div className="stat-value">1,200+</div>
                 </div>
             </div>
+
+            {/* <div>
+                <div className="flex flex-row-reverse justify-between items-center p-8 w-80 border border-left">
+                    <div className="    text-secondary">
+                        <FontAwesomeIcon icon={faFlag} className='text-4xl'></FontAwesomeIcon>
+                    </div>
+                    <div>
+                        <p className="stat-title text-xl mb-6">Countries</p>
+                        <p className="font-extrabold text-5xl">67</p>
+                    </div>
+                </div>
+            </div> */}
         </div>
     );
 };

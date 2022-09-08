@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/'}>Home</Link></li>
-        <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/blog'}>Blog</Link></li>
+        {/* <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/blog'}>Blog</Link></li> */}
         <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/portfolio'}>Portfolio</Link></li>
         {
             user && <li><Link className='btn bg-white text-black hover:bg-red-600 hover:text-white border-none' to={'/dashboard'}>Dashboard</Link></li>

@@ -19,7 +19,7 @@ const MyProfile = () => {
     };
 
     return (
-        <div>
+        <div className='min-h-screen bg-base-100'>
             <h2 className='text-center text-2xl mt-2'>My Profile</h2>
 
             <form onSubmit={handleUpdateProduct}>

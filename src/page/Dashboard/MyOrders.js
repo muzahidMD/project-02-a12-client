@@ -32,7 +32,7 @@ const MyOrders = () => {
     }, [user, navigate]);
 
     return (
-        <div>
+        <div className='min-h-screen bg-base-100'>
             <h3 className='text-center text-2xl mt-2'>My Orders: {orders.length}</h3>
             <div className="overflow-x-auto my-8">
                 <table className="table w-full">
