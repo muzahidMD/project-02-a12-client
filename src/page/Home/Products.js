@@ -6,9 +6,9 @@ const Products = () => {
     const [products,] = useProducts();
 
     return (
-        <div className='my-8 mx-auto w-[90%] lg:w-[75%]'>
-            <h2 className='text-4xl text-secondary text-center uppercase font-bold'>Products</h2>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+        <div className='my-8 mx-auto w-[90%] lg:w-[85%]'>
+            <h2 className='text-4xl text-secondary text-center uppercase font-bold my-10'>Products</h2>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 my-5'>
                 {
                     products.slice(0, 6).reverse().map(product => <Product
                         key={product._id}

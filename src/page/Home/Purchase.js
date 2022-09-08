@@ -79,9 +79,9 @@ const Purchase = () => {
                             <p>Quantity: <span className='font-bold'>{available}</span></p>
                             <p> Minimum Order: <span className='font-bold'>{minimumOrder}</span></p>
                         </div>
-                        <div className=' q mt-10'>
+                        <div className='mt-10'>
                             <h2 className='text-2xl text-center text-secondary mb-3'>Order Now</h2>
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} >
                                 <div className="form-control mx-auto text-left w-full max-w-xs">
                                     <label htmlFor="name" className='my-2'>Name</label>
                                     <input type="text" name='name' id='name' value={user?.displayName} disabled className="input input-bordered w-full max-w-xs" required />

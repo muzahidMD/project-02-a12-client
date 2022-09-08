@@ -11,12 +11,12 @@ const Product = ({ product }) => {
     }
 
     return (
-        <div className="card w-full lg:w-80 bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
-                <img src={img} alt="" className="rounded-xl" />
+        <div className="card w-full lg:w-96 bg-base-100 shadow-xl border">
+            <figure>
+                <img src={img} alt="" className="rounded-xl px-10 pt-10" />
             </figure>
-            <div className="card-body  ">
-                <h2 className="card-title uppercase">{name}</h2>
+            <div className="card-body">
+                <h2 className="card-title uppercase text-secondary font-bold">{name}</h2>
                 <p>{description}</p>
                 <h3 className='text-lg font-bold'>Price: ${price}</h3>
                 <div className='flex justify-between w-full'>
